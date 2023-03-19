@@ -2,8 +2,7 @@ import './signupform.css'
 import React from "react";
 
 
-
-export class signupform extends React.Component{
+export class SignUpform extends React.Component{
     handleChange = (event : any) => {
         event.preventDefault();
         const { name, value } = event.target;
@@ -49,32 +48,6 @@ export class signupform extends React.Component{
         );
     }
 }
-export default signupform
 
 
-// function SignUpForm() {
-//     const [count, setCount] = useState(0)
-//
-//     return (
-//         <form action="/action_page.php">
-//             <div className="container">
-//                 <h2>Subscribe to our Safestamp Newsletter</h2>
-//                 <p>Lorem ipsum text about why you should subscribe to our newsletter blabla. Lorem ipsum text about why
-//                     you should subscribe to our newsletter blabla.</p>
-//             </div>
-//
-//             <div className="container" style="background-color:white">
-//                 <input type="text" placeholder="Name" name="name" required>
-//                     <input type="text" placeholder="Email address" name="mail" required>
-//                         <label>
-//                             <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
-//                         </label>
-//             </div>
-//
-//             <div className="container">
-//                 <input type="submit" value="Subscribe">
-//             </div>
-//         </form>
-//     )
-// }
-//
+
