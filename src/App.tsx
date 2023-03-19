@@ -2,7 +2,9 @@ import './App.css'
 import Navbar from './components/Navbar'
 import './components/Navbar.css'
 import logo from './components/logo.png'
-import {Route, Routes} from "react-router-dom"
+import "react-router-dom";
+import React from "react";
+import signupform from "./signupform";
 
 function App() {
   const links = [
@@ -11,7 +13,8 @@ function App() {
     { title: 'Clients', url: '/clients' },
     { title: 'Contact', url: '/contact', id: "contact"},
   ]
-  
+  let signup = new signupform("");
+
   return (
     <div className="App">
       <div>
