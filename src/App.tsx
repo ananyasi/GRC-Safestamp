@@ -2,6 +2,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import './components/Navbar.css'
 import logo from './components/logo.png'
+import {Route, Routes} from "react-router-dom"
 
 function App() {
   const links = [
@@ -10,7 +11,7 @@ function App() {
     { title: 'Clients', url: '/clients' },
     { title: 'Contact', url: '/contact', id: "contact"},
   ]
-
+  
   return (
     <div className="App">
       <div>
