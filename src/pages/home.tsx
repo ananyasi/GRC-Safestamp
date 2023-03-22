@@ -1,5 +1,4 @@
-import React from "react";
-import { SignUpform } from "../signupform";
+import { Application as SignUpForm } from "../signupform";
   
 const Home = () => {
   return (
@@ -7,7 +6,7 @@ const Home = () => {
       <h1>
         SafeStamp
       </h1>
-      <SignUpform/>
+      <SignUpForm />
     </div>
     
   );

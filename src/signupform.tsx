@@ -6,7 +6,7 @@ import { useFormspark } from "@formspark/use-formspark";
 
 const FORMSPARK_FORM_ID = "py17WqXT";
 
-const Application = () => {
+export const Application = () => {
     const [submit, submitting] = useFormspark({
         formId: FORMSPARK_FORM_ID,
     });
