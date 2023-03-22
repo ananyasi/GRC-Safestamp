@@ -1,53 +1,53 @@
 import './signupform.css'
 import React from "react";
+import { useState } from "react";
+import ReactDOM from "react-dom";
+import { useFormspark } from "@formspark/use-formspark";
 
+const FORMSPARK_FORM_ID = "py17WqXT";
 
-export class SignUpform extends React.Component{
-    handleChange = (event : any) => {
-        event.preventDefault();
-        const { name, value } = event.target;
-        this.setState({[name]: value});
-        console.log(this.state) ;
-    }
-    handleSubmit = (event : any) => {}
+const Application = () => {
+    const [submit, submitting] = useFormspark({
+        formId: FORMSPARK_FORM_ID,
+    });
 
+        const onSubmit = async (e: { preventDefault: () => void; }) => {
+            e.preventDefault();
+            await submit({ firstName, lastName, email });
+            alert("Form submitted");
+        };
 
-    constructor(props: any) {
-        super(props);
-        this.state = {
-            username : null,
-            email : null,
-            password : null
-        }
-    }
+        const [firstName, setFirstName] = useState("");
+        const [lastName, setLastName] = useState("");
+        const [email, setEmail] = useState("");
 
-    render() {
-        return (
-            <div className='wrapper'>
-                <div className='form-wrapper'>
-                    <h2>Sign Up</h2>
-                    <form onSubmit={this.handleSubmit} noValidate >
-                        <div className='firstName'>
-                            <label htmlFor="firstName">Full Name</label>
-                            <input type='text' name='firstName' onChange=            {this.handleChange}/>
-                        </div>
-                        <div className='lastName'>
-                            <label htmlFor="lastName">Last Name</label>
-                            <input type='text' name='lastName' onChange=            {this.handleChange}/>
-                        </div>
-                        <div className='email'>
-                            <label htmlFor="email">Email</label>
-                            <input type='email' name='email' onChange={this.handleChange}/>
-                        </div>
-                        <div className='submit'>
-                            <button>Register Me</button>
-                        </div>
-                    </form>
-                </div>
+    return (
+        <div className='wrapper'>
+            <div className='form-wrapper'>
+                <h2>Sign Up</h2>
+                <form onSubmit={onSubmit} noValidate >
+                    <div className='firstName'>
+                        <label htmlFor="firstName">Full Name</label>
+                        <input type='text' value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
+                    </div>
+                    <div className='lastName'>
+                        <label htmlFor="lastName">Last Name</label>
+                        <input type='text' value={lastName} onChange={(e) => setLastName(e.target.value)}/>
+                    </div>
+                    <div className='email'>
+                        <label htmlFor="email">Email</label>
+                        <input type='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                    </div>
+                    <div className='submit'>
+                        <button type = "submit" disabled={submitting}> Register Me</button>
+                    </div>
+                </form>
             </div>
-        );
-    }
+        </div>
+    );
 }
+export default Application
+
 
 
 

@@ -4,7 +4,7 @@ import './components/Navbar.css'
 import logo from './components/logo.png'
 import "react-router-dom";
 import React from "react";
-import { SignUpform } from "./signupform";
+import Application from "./signupform";
 
 function App() {
   const links = [
@@ -19,7 +19,7 @@ function App() {
       <div>
         <Navbar logo={logo} links={links}/>
       </div>
-      <SignUpform/>
+      <Application/>
     </div>
   )
 }
