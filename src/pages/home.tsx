@@ -8,7 +8,7 @@ function NewsStory({ title, author, url }: {
 }) {
   return <div>
     <h3><a href={url} target="_blank">{title}</a></h3>
-    <div>{author}</div>
+    <p>{author}</p>
   </div>
 }
 
