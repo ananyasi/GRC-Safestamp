@@ -5,6 +5,8 @@ import logo from './components/logo.png'
 import About from './pages/about'
 import Clients from './pages/clients'
 import Home from './pages/home'
+import Contact from './pages/contact'
+
 import { BrowserRouter as Router, Routes, Route, createBrowserRouter, createRoutesFromElements, RouterProvider, Outlet }
     from 'react-router-dom';
 import React from "react";
@@ -13,7 +15,7 @@ const links = [
     { title: 'Home', url: '/' },
     { title: 'About', url: '/about' },
     { title: 'Clients', url: '/clients' },
-    { title: 'Contact', url: '/contact', id: "contact"},
+    { title: 'Contact', url: '/contact'},
 ];
 
 const router = createBrowserRouter(createRoutesFromElements(
@@ -24,6 +26,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={<Home />} />
     <Route path="/about" element={<About />} />
     <Route path="/clients" element={<Clients />} />
+    <Route path="/contact" element={<Contact />} />
   </Route>
 ));
 
