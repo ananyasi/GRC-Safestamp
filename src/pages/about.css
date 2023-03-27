@@ -1,0 +1,11 @@
+.award-list {
+    list-style: none;
+}
+
+.award-list li {
+    margin-bottom: 1em;
+}
+
+.award-list li:last-child {
+    margin-bottom: 0;
+}

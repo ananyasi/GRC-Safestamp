@@ -1,9 +1,11 @@
 import React from "react";
-import { ContentSection } from "../components/ContentBlocks";
+import { ContentSection, ImageBackground, PageContainer } from "../components/ContentBlocks";
+import hands from "../assets/hands.jpg"
+import "./about.css"
 
 const About = () => {
-  return <>
-    <ContentSection>
+  return <PageContainer>
+    <ContentSection textSize="medium">
       <h2>Our mission is to save millions of lives.</h2>
       <p>
         SafeStamp seeks to redefine protection against counterfeit products in the pharmaceutical industry.
@@ -19,12 +21,14 @@ const About = () => {
         is authentic. 
       </p>
     </ContentSection>
-    <ContentSection>
-      <p>We protect what matters most — working towards a safer world for the generations ahead.</p>
-    </ContentSection>
-    <ContentSection>
+    <ImageBackground backgroundImage={hands}>
+      <ContentSection textSize="large">
+        <p>We protect what matters most — working towards a safer world for the generations ahead.</p>
+      </ContentSection>
+    </ImageBackground>
+    <ContentSection textSize="medium">
       <h2>Awards and Accomplishments</h2>
-      <ul>
+      <ul className="award-list">
         <li>Attendee; White House Demo Day</li>
         <li>Winner; University of Pennsylvania iDesign Competition</li>
         <li>Y-Prize Competition</li>
@@ -40,7 +44,7 @@ const About = () => {
         <li>1st Place - Venture Category, Rice University’s Veterans Business Battle 2019</li>
       </ul>
     </ContentSection>
-  </>;
-};
+  </PageContainer>
+}
   
 export default About
