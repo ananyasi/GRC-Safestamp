@@ -13,13 +13,14 @@ export const Application = () => {
 
         const onSubmit = async (e: { preventDefault: () => void; }) => {
             e.preventDefault();
-            await submit({ firstName, lastName, email });
+            await submit({ firstName, lastName, email, message });
             alert("Form submitted");
         };
 
         const [firstName, setFirstName] = useState("");
         const [lastName, setLastName] = useState("");
         const [email, setEmail] = useState("");
+        const [message, setMessage] = useState("");
 
     return (
         <div className='wrapper'>
@@ -36,7 +37,11 @@ export const Application = () => {
                     </div>
                     <div className='email'>
                         <label htmlFor="email">Email</label>
-                        <input type='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                        <input type='text' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                    </div>
+                    <div className='message'>
+                        <label htmlFor="message">Message</label>
+                        <textarea value={message} onChange={(e) => setMessage(e.target.value)}/>
                     </div>
                     <div className='submit'>
                         <button type = "submit" disabled={submitting}> Submit Message </button>
