@@ -27,6 +27,9 @@ export const Application = () => {
             <div className='form-wrapper'>
                 <h2>Contact Us</h2>
                 <form onSubmit={onSubmit} noValidate >
+                    <div className="blurb">
+                        <p>Your blurb text goes here. You can write a short description, instructions, or any other relevant information.</p>
+                    </div>
                     <div className='firstName'>
                         <label htmlFor="firstName">First Name</label>
                         <input type='text' value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
