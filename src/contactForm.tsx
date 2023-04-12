@@ -51,7 +51,7 @@ export const Application = () => {
                             checked={isClientInvestor}
                             onChange={(e) => setIsClientInvestor(e.target.checked)}
                         />
-                        <label htmlFor="isClientInvestor">Interested client or investor</label>
+                        <label htmlFor="isClientInvestor">Client or investor</label>
                     </div>
                     <div className='message'>
                         <label htmlFor="message">Message</label>
