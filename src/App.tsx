@@ -2,10 +2,11 @@ import './App.css'
 import Navbar from './components/Navbar'
 import './components/Navbar.css'
 import logo from './components/logo.png'
-import About from './pages/about'
+import Product from './pages/product'
 import Clients from './pages/clients'
 import Home from './pages/home'
 import Contact from './pages/contact'
+import SocialImpact from './pages/socialimpact'
 
 import { BrowserRouter as Router, Routes, Route, createBrowserRouter, createRoutesFromElements, RouterProvider, Outlet }
     from 'react-router-dom';
@@ -13,9 +14,10 @@ import React from "react";
 
 const links = [
     { title: 'Home', url: '/' },
-    { title: 'About', url: '/about' },
+    { title: 'Product', url: '/product' },
     { title: 'Clients', url: '/clients' },
-    { title: 'Contact', url: '/contact'},
+    { title: 'Social Impact', url: '/socialimpact' },
+    { title: 'Contact Us', url: '/contact'},
 ];
 
 const router = createBrowserRouter(createRoutesFromElements(
@@ -24,8 +26,9 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Outlet />
   </>}>
     <Route path="/" element={<Home />} />
-    <Route path="/about" element={<About />} />
+    <Route path="/product" element={<Product />} />
     <Route path="/clients" element={<Clients />} />
+    <Route path="/socialimpact" element={<SocialImpact />} />
     <Route path="/contact" element={<Contact />} />
   </Route>
 ));

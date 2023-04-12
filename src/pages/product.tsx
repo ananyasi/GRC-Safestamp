@@ -1,9 +1,9 @@
 import React from "react";
 import { ContentSection, ImageBackground, PageContainer } from "../components/ContentBlocks";
 import hands from "../assets/hands.jpg"
-import "./about.css"
+import "./product.css"
 
-const About = () => {
+const Product = () => {
   return <PageContainer>
     <ContentSection textSize="medium">
       <h2>Our mission is to save millions of lives.</h2>
@@ -47,4 +47,4 @@ const About = () => {
   </PageContainer>
 }
   
-export default About
+export default Product
