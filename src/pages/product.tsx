@@ -2,6 +2,12 @@ import { ContentColumn, ContentColumns, ContentSection, ImageBackground, PageCon
 import { PlaceholderImage } from "../components/PlaceholderImage";
 import "./product.css";
 import hands from "../assets/hands.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+
+function Checkmark() {
+  return <FontAwesomeIcon icon={faCheckCircle} />
+}
 
 export function Product() {
   return <PageContainer>
@@ -26,12 +32,61 @@ export function Product() {
     <ContentColumns alignment="center">
       <ContentColumn size={1.5}>
         <h1>Sophisticated <u>nanotech</u></h1>
-        <p>Patented technology ensures counterfeiters can&rsquo;t replicate SafeStamp.</p>
+        <p><strong>Patented technology</strong> ensures counterfeiters can&rsquo;t replicate SafeStamp.</p>
       </ContentColumn>
       <ContentColumn size={2}>
         <PlaceholderImage />
       </ContentColumn>
     </ContentColumns>
+    <ContentSection centered>
+      <h2>See how we stack up.</h2>
+      <table className="competitor-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>SafeStamp</th>
+            <th>3M</th>
+            <th>DeLaRue</th>
+            <th>Avery Dennison</th>
+            <th>TruTag</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Reusable</th>
+            <td><Checkmark /></td>
+            <td><Checkmark /></td>
+            <td><Checkmark /></td>
+            <td><Checkmark /></td>
+            <td><Checkmark /></td>
+          </tr>
+          <tr>
+            <th>No additional device required</th>
+            <td><Checkmark /></td>
+            <td><Checkmark /></td>
+            <td><Checkmark /></td>
+            <td />
+            <td />
+          </tr>
+          <tr>
+            <th>Overt and simple verification</th>
+            <td><Checkmark /></td>
+            <td />
+            <td />
+            <td><Checkmark /></td>
+            <td />
+          </tr>
+          <tr>
+            <th>Irreproducible</th>
+            <td><Checkmark /></td>
+            <td />
+            <td />
+            <td />
+            <td />
+          </tr>
+        </tbody>
+      </table>
+    </ContentSection>
     <ImageBackground backgroundImage={hands}>
       <ContentSection textSize="large">
         <p>We protect what matters most — working towards a safer world for the generations ahead.</p>
