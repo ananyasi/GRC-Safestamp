@@ -55,7 +55,7 @@ export const Application = () => {
                     </div>
                     <div className='message'>
                         <label htmlFor="message">Message</label>
-                        <textarea rows = "6" cols = "40" value={message} onChange={(e) => setMessage(e.target.value)}/>
+                        <textarea rows = {6} cols = {40} value={message} onChange={(e) => setMessage(e.target.value)}/>
                     </div>
                     <div className='submit'>
                         <button type = "submit" disabled={submitting}> Submit Message </button>
