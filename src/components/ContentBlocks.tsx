@@ -6,10 +6,18 @@ export type ContentSectionProps = PropsWithChildren<{
   className?: string,
   style?: CSSProperties,
   centered?: boolean,
-  textSize?: "small" | "medium" | "large"
+  textSize?: "small" | "medium" | "large",
+  wide?: boolean
 }>
 
-export function ContentSection({ children, className: customClass, style, centered = false, textSize = "small" }: ContentSectionProps) {
+export function ContentSection({
+  children,
+  className: customClass,
+  style,
+  centered = false,
+  textSize = "small",
+  wide = false
+}: ContentSectionProps) {
   let className = "section";
 
   if (centered) {
@@ -20,6 +28,10 @@ export function ContentSection({ children, className: customClass, style, center
     className += ` section-text-${textSize}`;
   }
 
+  if (wide) {
+    className += " section-wide";
+  }
+
   if (customClass) {
     className += ` ${customClass}`;
   }
@@ -27,6 +39,26 @@ export function ContentSection({ children, className: customClass, style, center
   return <section className={className} style={style}>
     {children}
   </section>
+}
+
+export type ContentColumnsProps = PropsWithChildren<{
+  alignment: "top" | "center" | "bottom"
+}>
+
+export function ContentColumns({ children, alignment }: ContentColumnsProps) {
+  return <ContentSection wide className={`columns columns-alignment-${alignment}`}>
+    {children}
+  </ContentSection>
+}
+
+export type ContentColumnProps = PropsWithChildren<{
+  size: number
+}>
+
+export function ContentColumn({ children, size }: ContentColumnProps) {
+  return <div className="column" style={{ flexGrow: size }}>
+    {children}
+  </div>
 }
 
 export type ImageBackgroundProps = PropsWithChildren<{

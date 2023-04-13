@@ -10,7 +10,7 @@
 .form-wrapper {
     display: flex;
     flex-direction: column;
-    width: 280px;
+    width: 300px;
     max-width: 80%;
     min-width: 100px;
     min-height: 400px;
@@ -53,6 +53,16 @@ input::placeholder {
     font-weight: lighter;
     color: #bbb;
 }
+
+.message textarea {
+    font-family: Arial, sans-serif;
+}
+
+.clientinvestor-checkbox {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+  }
 
 button {
     min-width: 100%;
