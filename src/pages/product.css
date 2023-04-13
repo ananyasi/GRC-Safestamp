@@ -1,11 +1,17 @@
+u {
+  text-decoration-color: #20A2FA;
+  text-underline-offset: 0.1em;
+  text-decoration-thickness: 0.1em;
+}
+
 .award-list {
-    list-style: none;
+  list-style: none;
 }
 
 .award-list li {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .award-list li:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }

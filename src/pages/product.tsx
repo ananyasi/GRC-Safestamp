@@ -1,26 +1,37 @@
-import React from "react";
-import { ContentSection, ImageBackground, PageContainer } from "../components/ContentBlocks";
-import hands from "../assets/hands.jpg"
-import "./product.css"
+import { ContentColumn, ContentColumns, ContentSection, ImageBackground, PageContainer } from "../components/ContentBlocks";
+import { PlaceholderImage } from "../components/PlaceholderImage";
+import "./product.css";
+import hands from "../assets/hands.jpg";
 
-const Product = () => {
+export function Product() {
   return <PageContainer>
-    <ContentSection textSize="medium">
-      <h2>Our mission is to save millions of lives.</h2>
-      <p>
-        SafeStamp seeks to redefine protection against counterfeit products in the pharmaceutical industry.
-        Counterfeit medicine has hurt pharmaceutical firms worldwide, leading to $200 billion in lost revenue
-        each year. But much worse, a million people die annually from fake drugs, and millions more suffer health
-        complications.
-      </p>
-      <p>
-        SafeStamp is an advanced quantum nanotech indicator, patent-pending in +60 countries, that allows consumers
-        to ensure the legitimacy of the products they purchase. It is as easy as touch and blow, glow and know—touch
-        the indicator and it glows, breathe on the indicator and the glow changes color; this glow is based on an
-        advanced nanotech reaction that resists replication by counterfeiters, so if it glows, you know your product
-        is authentic. 
-      </p>
-    </ContentSection>
+    <ContentColumns alignment="center">
+      <ContentColumn size={1.5}>
+        <h1>A <u>new approach</u> to anti-counterfeiting</h1>
+        <p>Meet SafeStamp, the world&rsquo;s first <strong>nanotech-powered</strong> anti-counterfeiting indicator.</p>
+      </ContentColumn>
+      <ContentColumn size={2}>
+        <PlaceholderImage />
+      </ContentColumn>
+    </ContentColumns>
+    <ContentColumns alignment="center">
+      <ContentColumn size={2}>
+        <PlaceholderImage text="[placeholder image, or a video]" />
+      </ContentColumn>
+      <ContentColumn size={1.5}>
+        <h1>All it takes is <u>one touch</u></h1> {/* TODO: Refactor header styles */}
+        <p>Simply touch the indicator, and the <strong>outer rings change color</strong> to let you know a product is authentic.</p>
+      </ContentColumn>
+    </ContentColumns>
+    <ContentColumns alignment="center">
+      <ContentColumn size={1.5}>
+        <h1>Sophisticated <u>nanotech</u></h1>
+        <p>Patented technology ensures counterfeiters can&rsquo;t replicate SafeStamp.</p>
+      </ContentColumn>
+      <ContentColumn size={2}>
+        <PlaceholderImage />
+      </ContentColumn>
+    </ContentColumns>
     <ImageBackground backgroundImage={hands}>
       <ContentSection textSize="large">
         <p>We protect what matters most — working towards a safer world for the generations ahead.</p>
@@ -46,5 +57,3 @@ const Product = () => {
     </ContentSection>
   </PageContainer>
 }
-  
-export default Product
