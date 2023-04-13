@@ -52,11 +52,12 @@ export function ContentColumns({ children, alignment }: ContentColumnsProps) {
 }
 
 export type ContentColumnProps = PropsWithChildren<{
-  size: number
+  size: number,
+  order?: number
 }>
 
-export function ContentColumn({ children, size }: ContentColumnProps) {
-  return <div className="column" style={{ flexGrow: size }}>
+export function ContentColumn({ children, size, order }: ContentColumnProps) {
+  return <div className="column" style={{ flexGrow: size, order }}>
     {children}
   </div>
 }

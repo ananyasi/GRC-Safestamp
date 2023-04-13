@@ -68,12 +68,17 @@
   .columns-alignment-bottom {
     align-items: flex-end;
   }
+
+  .column {
+    margin-bottom: 0;
+  }
 }
 
 .column {
   width: 100%;
   padding: 0 3vmin;
   flex-basis: 0;
+  margin-bottom: 3vmax;
 }
 
 .image-background {

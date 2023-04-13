@@ -21,12 +21,12 @@ export function Product() {
       </ContentColumn>
     </ContentColumns>
     <ContentColumns alignment="center">
-      <ContentColumn size={2}>
-        <PlaceholderImage text="[placeholder image, or a video]" />
-      </ContentColumn>
-      <ContentColumn size={1.5}>
+      <ContentColumn size={1.5} order={2}>
         <h1>All it takes is <u>one touch</u></h1> {/* TODO: Refactor header styles */}
         <p>Simply touch the indicator, and the <strong>outer rings change color</strong> to let you know a product is authentic.</p>
+      </ContentColumn>
+      <ContentColumn size={2} order={1}>
+        <PlaceholderImage text="[placeholder image, or a video]" />
       </ContentColumn>
     </ContentColumns>
     <ContentColumns alignment="center">
