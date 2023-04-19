@@ -2,6 +2,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import './components/Navbar.css'
 import logo from './components/logo.png'
+import { Applications } from './pages/applications'
 import { Product } from './pages/product'
 import Clients from './pages/clients'
 import Home from './pages/home'
@@ -26,6 +27,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Outlet />
   </>}>
     <Route path="/" element={<Home />} />
+    <Route path="/applications" element={<Applications />} />
     <Route path="/product" element={<Product />} />
     <Route path="/clients" element={<Clients />} />
     <Route path="/socialimpact" element={<SocialImpact />} />
