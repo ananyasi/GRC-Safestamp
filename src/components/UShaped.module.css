@@ -1,0 +1,29 @@
+.uarc {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.arcItem {
+  transform-origin: 50% 50%;
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+  .uarc {
+    height: 400px;
+    position: relative;
+  }
+
+  .arcItem {
+    position: absolute;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+  .uarc {
+    flex-direction: column;
+  }
+}

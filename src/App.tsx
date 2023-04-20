@@ -3,33 +3,35 @@ import Navbar from './components/Navbar'
 import './components/Navbar.css'
 import logo from './components/logo.png'
 import { Product } from './pages/product'
-import Clients from './pages/clients'
+import { Applications } from './pages/applications'
 import Home from './pages/home'
-import Contact from './pages/contact'
-import SocialImpact from './pages/socialimpact'
+import ReachOut from './pages/reachout'
+import AboutUs from './pages/aboutus'
 
 import { BrowserRouter as Router, Routes, Route, createBrowserRouter, createRoutesFromElements, RouterProvider, Outlet }
     from 'react-router-dom';
 import React from "react";
 
 const links = [
-    { title: 'Home', url: '/' },
     { title: 'Product', url: '/product' },
-    { title: 'Clients', url: '/clients' },
-    { title: 'Social Impact', url: '/socialimpact' },
-    { title: 'Contact Us', url: '/contact'},
+    { title: 'Applications', url: '/applications' },
+];
+
+const links2 = [
+  { title: 'About Us', url: '/aboutus' },
+  { title: 'Reach Out', url: '/reachout'},
 ];
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<>
-    <Navbar logo={logo} links={links}/>
+    <Navbar logo={logo} links_left={links} links_right={links2}/>
     <Outlet />
   </>}>
     <Route path="/" element={<Home />} />
     <Route path="/product" element={<Product />} />
-    <Route path="/clients" element={<Clients />} />
-    <Route path="/socialimpact" element={<SocialImpact />} />
-    <Route path="/contact" element={<Contact />} />
+    <Route path="/applications" element={<Applications />} />
+    <Route path="/aboutus" element={<AboutUs />} />
+    <Route path="/reachout" element={<ReachOut />} />
   </Route>
 ));
 
