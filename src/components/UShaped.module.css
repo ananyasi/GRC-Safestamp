@@ -1,8 +1,5 @@
 .uarc {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .arcItem {
@@ -12,12 +9,14 @@
 /* Desktop view */
 @media (min-width: 768px) {
   .uarc {
-    height: 400px;
+    height: 300px;
     position: relative;
   }
 
   .arcItem {
     position: absolute;
+    top: 0;
+    left: 50%;
   }
 }
 
@@ -25,5 +24,9 @@
 @media (max-width: 767px) {
   .uarc {
     flex-direction: column;
+  }
+
+  .arcItem {
+    transform: none !important;
   }
 }
