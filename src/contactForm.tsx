@@ -21,7 +21,8 @@ export const Application = () => {
         const [lastName, setLastName] = useState("");
         const [email, setEmail] = useState("");
         const [message, setMessage] = useState("");
-        const [isClientInvestor, setIsClientInvestor] = useState(false);
+        const [isClient, setIsClient] = useState(false);
+        const [isInvestor, setIsInvestor] = useState(false);
 
     return (
         <div className='wrapper'>
@@ -44,14 +45,23 @@ export const Application = () => {
                         <label htmlFor="email">Email</label>
                         <input type='text' value={email} onChange={(e) => setEmail(e.target.value)}/>
                     </div>
-                    <div className="clientinvestor-checkbox">
+                    <div className="client-checkbox">
                         <input
                             type="checkbox"
-                            id="isClientInvestor"
-                            checked={isClientInvestor}
-                            onChange={(e) => setIsClientInvestor(e.target.checked)}
+                            id="isClient"
+                            checked={isClient}
+                            onChange={(e) => setIsClient(e.target.checked)}
                         />
-                        <label htmlFor="isClientInvestor">Client or Investor</label>
+                        <label htmlFor="isClient">Client</label>
+                    </div>
+                    <div className="investor-checkbox">
+                        <input
+                            type="checkbox"
+                            id="isInvestor"
+                            checked={isInvestor}
+                            onChange={(e) => setIsInvestor(e.target.checked)}
+                        />
+                        <label htmlFor="isInvestor">Investor</label>
                     </div>
                     <div className='message'>
                         <label htmlFor="message">Message</label>
