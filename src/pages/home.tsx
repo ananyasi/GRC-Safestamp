@@ -4,6 +4,9 @@ import { PlaceholderImage } from "../components/PlaceholderImage";
 import { Application as SignUpForm } from "../signupform";
 import './home.css';
 import computer from "../assets/computer.jpg"
+import left from '../components/pic1landing.png'
+import right from '../components/pic2landing.png'
+import stat from '../components/statisticlanding.png'
 
 function NewsStory({ title, author, url }: {
   title: string,
@@ -29,30 +32,32 @@ function Client({ children, backgroundImage }: PropsWithChildren<{
 const Home = () => {
   return <PageContainer>
     <ContentSection textSize="medium" centered>
-      <h1>Lost Profits, Lost Lives</h1>
+      <h1>Lost Profits, Lost Lives.</h1>
     </ContentSection>
     <ContentSection textSize="small" centered>
-      <h1><u>Counterfeits Cost</u></h1>
+      <h1><u>Counterfeits Cost.</u></h1>
+    </ContentSection>
+    <ContentColumns alignment="center">
+      <ContentColumn size={2}>
+        <img src={left}></img>
+      </ContentColumn>
+      <ContentColumn size={1.5}>
+        <h2><i>Counterfeiting is the largest criminal enterprise in the world, with domestic and international sales of counterfeit and pirated goods totaling between an estimated <u>$1.7 trillion</u> and <u>$4.5 trillion</u> a year</i></h2>
+      </ContentColumn>
+    </ContentColumns>
+    <ContentSection textSize="small" centered>
+      <h1><u>Counterfeits Kill.</u></h1>
     </ContentSection>
     <ContentColumns alignment="center">
       <ContentColumn size={1.5}>
-        <h1>A <u>new approach</u> to anti-counterfeiting</h1>
-        <p>Meet SafeStamp, the world&rsquo;s first <strong>nanotech-powered</strong> anti-counterfeiting indicator.</p>
+        <h2>Fake medicines have been found to contain <u>mercury</u>, <u>arsenic</u>, <u>rat poison</u>, or <u>cement</u></h2>
       </ContentColumn>
       <ContentColumn size={2}>
-        <PlaceholderImage />
+        <img src={right}></img>
+        <img src={stat}></img>
       </ContentColumn>
     </ContentColumns>
-    <ContentColumns alignment="center">
-      <ContentColumn size={1.5} order={2}>
-        <h1>All it takes is <u>one touch</u></h1> {/* TODO: Refactor header styles */}
-        <p>Simply touch the indicator, and the <strong>outer rings change color</strong> to let you know a product is authentic.</p>
-      </ContentColumn>
-      <ContentColumn size={2} order={1}>
-        <PlaceholderImage text="[placeholder image, or a video]" />
-      </ContentColumn>
-    </ContentColumns>
-    <Client backgroundImage={computer}>
+    {/* <Client backgroundImage={computer}>
       <h1>$4.2 trillion</h1>
       <p className="small">
         Total Value of Counterfeited Goods in 2022
@@ -62,16 +67,15 @@ const Home = () => {
           url="https://www.forbes.com/sites/forbesbusinesscouncil/2022/08/02/the-global-impact-of-counterfeiting-and-solutions-to-stop-it/"
         /> 
       </p>
-      </Client>
-    <ContentSection textSize="medium" centered>
-      <h1>Our Solution:</h1>
-      <a href='/product'>SafeStamp</a>
+      </Client> */}
+    <ContentSection textSize="large" centered>
+      <h2>It’s time to save corporate earnings and human lives. It’s time for <a href='/product'>SafeStamp®</a></h2>
     </ContentSection>
-    <ContentSection textSize="medium">
+    {/* <ContentSection textSize="medium">
       <h2>We're putting an end to counterfeiting.</h2>
       <p>Interested in the fight against counterfeiting? Sign up to receive news and updates. You can be part of our movement!</p>
       <SignUpForm />
-    </ContentSection>
+    </ContentSection> */}
   </PageContainer>
 };
   
