@@ -5,6 +5,9 @@ import hands from "../assets/hands.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
+import left from '../components/ProductLeft.png'
+import right from '../components/ProductRight.png'
+
 function Checkmark() {
   return <FontAwesomeIcon icon={faCheckCircle} />
 }
@@ -12,30 +15,26 @@ function Checkmark() {
 export function Product() {
   return <PageContainer>
     <ContentColumns alignment="center">
-      <ContentColumn size={1.5}>
-        <h1>A <u>new approach</u> to anti-counterfeiting</h1>
-        <p>Meet SafeStamp, the world&rsquo;s first <strong>nanotech-powered</strong> anti-counterfeiting indicator.</p>
-      </ContentColumn>
       <ContentColumn size={2}>
-        <PlaceholderImage />
+        <h1>SafeStamp® is the <u>only</u> product with <u>both</u> attributes necessary to solve counterfeiting.</h1>
+        <p>ENGAGING INTERFACE: the touch-and-know interface <i>grabs</i> end-users; it's <i>fun</i></p>
+        <p>IRREPRODUCIBLE: the reaction stems from proprietary, advanced nanomaterial science too complicated to be replicated by counterfeiters (or anyone else for that matter)</p>
       </ContentColumn>
     </ContentColumns>
     <ContentColumns alignment="center">
       <ContentColumn size={1.5} order={2}>
-        <h1>All it takes is <u>one touch</u></h1> {/* TODO: Refactor header styles */}
-        <p>Simply touch the indicator, and the <strong>outer rings change color</strong> to let you know a product is authentic.</p>
+        <h2>Businesses put our deeptech indicator on their product's packaging.</h2>
       </ContentColumn>
       <ContentColumn size={2} order={1}>
-        <PlaceholderImage text="[placeholder image, or a video]" />
+        <img src={left}></img>
       </ContentColumn>
     </ContentColumns>
     <ContentColumns alignment="center">
       <ContentColumn size={1.5}>
-        <h1>Sophisticated <u>nanotech</u></h1>
-        <p><strong>Patented technology</strong> ensures counterfeiters can&rsquo;t replicate SafeStamp.</p>
+        <h2>Customers touch our deeptech indicator, triggering a color-change reaction and revealing branded images that verify the product came from an authentic source.</h2>
       </ContentColumn>
-      <ContentColumn size={2}>
-        <PlaceholderImage />
+      <ContentColumn size={1}>
+        <img src={right}></img>
       </ContentColumn>
     </ContentColumns>
     <ContentSection centered>
