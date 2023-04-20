@@ -13,16 +13,18 @@ import { BrowserRouter as Router, Routes, Route, createBrowserRouter, createRout
 import React from "react";
 
 const links = [
-    { title: 'Home', url: '/' },
     { title: 'Product', url: '/product' },
     { title: 'Applications', url: '/applications' },
-    { title: 'About Us', url: '/aboutus' },
-    { title: 'Reach Out', url: '/reachout'},
+];
+
+const links2 = [
+  { title: 'About Us', url: '/aboutus' },
+  { title: 'Reach Out', url: '/reachout'},
 ];
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<>
-    <Navbar logo={logo} links={links}/>
+    <Navbar logo={logo} links_left={links} links_right={links2}/>
     <Outlet />
   </>}>
     <Route path="/" element={<Home />} />

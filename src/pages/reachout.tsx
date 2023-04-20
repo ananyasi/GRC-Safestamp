@@ -1,6 +1,6 @@
 import { Application as ContactForm } from "../contactForm";
   
-const Contact = () => {
+const ReachOut = () => {
   return (
     <div>
       <ContactForm />
@@ -9,4 +9,4 @@ const Contact = () => {
   );
 };
   
-export default Contact
+export default ReachOut
