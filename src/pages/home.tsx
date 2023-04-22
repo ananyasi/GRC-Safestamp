@@ -49,7 +49,7 @@ const Home = () => {
       <h1><u>Counterfeits Kill.</u></h1>
     </ContentSection>
     <ContentColumns alignment="center">
-      <ContentColumn size={1.5}>
+      <ContentColumn size={2}>
         <h2>Fake medicines have been found to contain <u>mercury</u>, <u>arsenic</u>, <u>rat poison</u>, or <u>cement</u></h2>
       </ContentColumn>
       <ContentColumn size={2}>

@@ -17,8 +17,8 @@ export function Product() {
     <ContentColumns alignment="center">
       <ContentColumn size={2}>
         <h1>SafeStamp® is the <u>only</u> product with <u>both</u> attributes necessary to solve counterfeiting.</h1>
-        <p>ENGAGING INTERFACE: the touch-and-know interface <i>grabs</i> end-users; it's <i>fun</i></p>
-        <p>IRREPRODUCIBLE: the reaction stems from proprietary, advanced nanomaterial science too complicated to be replicated by counterfeiters (or anyone else for that matter)</p>
+        <p><b>Engaging Interface</b>: the touch-and-know interface <u>grabs</u> end-users; it's <u>fun</u></p>
+        <p><b>Irreproducible</b>: the reaction stems from proprietary, advanced nanomaterial science too complicated to be replicated by counterfeiters (or anyone else for that matter)</p>
       </ContentColumn>
     </ContentColumns>
     <ContentColumns alignment="center">
