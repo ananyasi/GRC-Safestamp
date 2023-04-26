@@ -18,6 +18,9 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ links_left, logo, links_right }) => {
     return (
         <nav className="navbar">
+            <div className="navbar-logo">
+              <a href="/"><img src={logo} alt="Logo" /></a>
+            </div>
             <ul className="navbar-list">
                 {links_left.map((link) => (
                     <li key={link.title}>
@@ -25,9 +28,6 @@ const Navbar: React.FC<NavbarProps> = ({ links_left, logo, links_right }) => {
                     </li>
                 ))}
             </ul>
-            <div className="navbar-logo">
-                <a href="/"><img src={logo} alt="Logo" /></a>
-            </div>
             <ul className="navbar-list">
                 {links_right.map((link) => (
                     <li key={link.title}>

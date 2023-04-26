@@ -6,14 +6,13 @@ body {
 .navbar {
     color: #333;
     display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    position: fixed;
-    top: 0px; 
-    right: 0px;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
     width: 100%;
     padding-top: 50px;
     align-items: center;
+    text-align: center;
   }
 
   .navbar-logo {
@@ -21,6 +20,11 @@ body {
     align-items: center;
     justify-content: space-between;
     padding-left: 0;
+    order: 1;
+  }
+
+  .navbar-list:last-of-type {
+    order: 2;
   }
   
   .navbar-logo img {
@@ -42,14 +46,13 @@ body {
   
   .navbar-link {
     color: #333;
-    margin: 0 10px;
+    margin: 0 20px;
     text-decoration: none;
     transition: color 0.5s;
-    font-weight: 300;
+    display: inline-block;
   }
 
   .navbar-link:hover {
-    font-weight: 500;
     text-decoration: underline;
     color: #333;
   }
@@ -65,3 +68,41 @@ body {
   #contact:hover {
     text-decoration: none;
   }
+
+  @media (max-width: 999px) {
+    .navbar {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .navbar-logo {
+        padding-bottom: 20px;
+        padding-left: 0;
+        padding-right: 0;
+        order: 0;
+    }
+
+    .navbar-list {
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .navbar-link:first-of-type, .navbar-link:last-of-type {
+      order: 0;
+    }
+
+    .navbar-link {
+        padding-left: 5px;
+        margin: 5px 0;
+    }
+}
