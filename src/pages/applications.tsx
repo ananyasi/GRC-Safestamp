@@ -36,7 +36,8 @@ function Client({ image, name }: { image?: string, name: string }) {
 export function Applications() {
   return <PageContainer>
     <ContentSection centered>
-      <h1 className={styles.mainHeading}>Protect your product. Enhance your brand.</h1>
+      <h1 className={styles.mainHeading}>Protect your product</h1>
+      <h1 className={styles.mainHeading}>Enhance your brand</h1>
       <img src={heroImage} className={styles.heroImage} />
       <div className={styles.uShapedContainer}>
         <UShaped>
