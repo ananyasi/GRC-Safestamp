@@ -56,10 +56,10 @@ const Home = () => {
       <ContentColumn size={2}>
         <img src={right}></img>
       </ContentColumn>
-      <ContentColumn size={2}>
-        <img src={stat}></img>
-      </ContentColumn>
     </ContentColumns>
+    <ContentSection textSize="small" centered>
+      <img src={stat}></img>
+    </ContentSection>
     {/* <Client backgroundImage={computer}>
       <h1>$4.2 trillion</h1>
       <p className="small">
