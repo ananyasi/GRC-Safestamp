@@ -31,11 +31,12 @@ function Client({ children, backgroundImage }: PropsWithChildren<{
 
 const Home = () => {
   return <PageContainer>
-    <ContentSection textSize="medium" centered>
-      <h1>Lost Profits, Lost Lives.</h1>
+    <ContentSection textSize="small" centered>
+      <h1>Counterfeiting</h1>
+      <h2>A Large and Growing Global Problem</h2>
     </ContentSection>
     <ContentSection textSize="small" centered>
-      <h1><u>Counterfeits Cost.</u></h1>
+      <h1><u>Economic Impact</u></h1>
     </ContentSection>
     <ContentColumns alignment="center">
       <ContentColumn size={2}>
@@ -46,7 +47,7 @@ const Home = () => {
       </ContentColumn>
     </ContentColumns>
     <ContentSection textSize="small" centered>
-      <h1><u>Counterfeits Kill.</u></h1>
+      <h1><u>Social Impact</u></h1>
     </ContentSection>
     <ContentColumns alignment="center">
       <ContentColumn size={2}>
@@ -54,6 +55,8 @@ const Home = () => {
       </ContentColumn>
       <ContentColumn size={2}>
         <img src={right}></img>
+      </ContentColumn>
+      <ContentColumn size={2}>
         <img src={stat}></img>
       </ContentColumn>
     </ContentColumns>
