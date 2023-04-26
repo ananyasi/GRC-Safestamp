@@ -28,7 +28,7 @@ export function Product() {
         <h2>Businesses put our deeptech indicator on their product's packaging.</h2>
       </ContentColumn>
       <ContentColumn size={2} order={1}>
-        <img src={center}></img>
+        <img className="center" src={center}></img>
       </ContentColumn>
     </ContentColumns>
     {/*<ContentColumns alignment="center">*/}
