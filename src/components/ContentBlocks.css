@@ -91,6 +91,12 @@
 }
 
 .page-container {
-    margin-top: 100px;
+    margin-top: 48px;
     width: 100%;
+}
+
+@media (max-width: 767px) {
+    .page-container {
+        margin-top: 12px;
+    }
 }
