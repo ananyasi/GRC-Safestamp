@@ -52,3 +52,11 @@ u {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:1200px;
+
+}

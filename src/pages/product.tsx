@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 import center from '../assets/Product.png'
-import right from '../components/ProductRight.png'
 
 function Checkmark() {
   return <FontAwesomeIcon icon={faCheckCircle} />
@@ -24,13 +23,14 @@ export function Product() {
       </ContentColumn>
     </ContentColumns>
     <ContentColumns alignment="center">
-      <ContentColumn size={1.5} order={2}>
-        <h2>Businesses put our deeptech indicator on their product's packaging.</h2>
-      </ContentColumn>
       <ContentColumn size={2} order={1}>
-        <img src={center}></img>
+        <img className="center" src={center}></img>
       </ContentColumn>
     </ContentColumns>
+    {/*<ContentColumn size={1.5} order={2}>*/}
+    {/*  <h2>Businesses put our deeptech indicator on their product's packaging.</h2>*/}
+    {/*</ContentColumn>*/}
+
     {/*<ContentColumns alignment="center">*/}
     {/*  <ContentColumn size={1.5}>*/}
     {/*    <h2>Customers touch our deeptech indicator, triggering a color-change reaction and revealing branded images that verify the product came from an authentic source.</h2>*/}
