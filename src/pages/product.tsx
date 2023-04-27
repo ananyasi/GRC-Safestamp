@@ -1,24 +1,47 @@
-import { ContentColumn, ContentColumns, ContentSection, ImageBackground, PageContainer } from "../components/ContentBlocks";
-import { PlaceholderImage } from "../components/PlaceholderImage";
-import "./product.css";
-import hands from "../assets/hands.jpg";
+import { faArrowRight, faCheckCircle, faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import { ContentColumn, ContentColumns, PageContainer } from "../components/ContentBlocks";
+import "./product.css";
+import { Fragment, useState } from "react";
+import center from '../assets/Product.png';
+import { Dialog, DialogProps, Transition } from "@headlessui/react";
 
-import center from '../assets/Product.png'
-
-function Checkmark() {
-  return <FontAwesomeIcon icon={faCheckCircle} />
+function StyledDialog({
+  open,
+  onClose,
+  children,
+}: Pick<DialogProps<any>, "open" | "onClose"> & { children: React.ReactNode }) {
+  return <Transition
+    appear
+    show={open}
+    enter="dialog-enter"
+    enterFrom="dialog-enter-from"
+    enterTo="dialog-enter-to"
+    leave="dialog-leave"
+    leaveFrom="dialog-leave-from"
+    leaveTo="dialog-leave-to"
+    as={Fragment}
+  >
+    <Dialog className="dialog-container" onClose={onClose}>
+      <div className="dialog-backdrop" />
+      <div className="dialog-scroll-container">
+        <div className="dialog-centering">
+          <Dialog.Panel className="dialog-panel">
+            <button type="button" className="dialog-close-button" onClick={() => onClose(true)}>
+              Close <FontAwesomeIcon icon={faClose} />
+            </button>
+            {children}
+          </Dialog.Panel>
+        </div>
+      </div>
+    </Dialog>
+  </Transition>
 }
 
-/* The `Product` function is returning a JSX element that contains a `PageContainer` component with
-two `ContentColumns` components. The first `ContentColumn` contains a `h1` element and two `p`
-elements with text describing the features of the SafeStamp® product. The second `ContentColumn`
-contains an `img` element with a `src` attribute pointing to an image file. The `ContentColumns`
-components are aligned to the center using the `alignment` prop and the second `ContentColumn` is
-given an `order` prop of 1 to change its position in the layout. */
-
 export function Product() {
+  const [isLeftPopoverOpen, setIsLeftPopoverOpen] = useState(false);
+  const [isRightPopoverOpen, setIsRightPopoverOpen] = useState(false);
+
   return <PageContainer>
     <ContentColumns alignment="center">
       <ContentColumn size={2}>
@@ -30,10 +53,64 @@ export function Product() {
           science <u>too complicated to be replicated</u></p>
       </ContentColumn>
     </ContentColumns>
-    <ContentColumns alignment="center">
-      <ContentColumn size={2} order={1}>
-        <img className="center" src={center}></img>
-      </ContentColumn>
-    </ContentColumns>
+    <div className="hero-image-section">
+      <div className="hero-image-container">
+        <img className="hero-image" src={center}></img>
+        <button type="button" className="hero-button hero-button-left" onClick={() => setIsLeftPopoverOpen(!isLeftPopoverOpen)}>
+          How it Works <FontAwesomeIcon icon={faArrowRight} />
+        </button>
+        <StyledDialog open={isLeftPopoverOpen} onClose={() => setIsLeftPopoverOpen(false)}>
+          <Dialog.Title>The engineering behind SafeStamp</Dialog.Title>
+          <p className="lead">We have engineered and developed the only material that is able to change
+          color under light physical force.</p>
+          <p>The reaction can be repeated tens of thousands
+          of times, and the indicator operates in a wide range of temperature, pressure,
+          altitude and humidity conditions.</p>
+          <p>In order to accomplish this, we have developed
+          a unique manufacturing process to make nanoparticles in the narrow range of sizes,
+          that allow for the reflection of all colors of the visible spectrum. Additionally,
+          we have engineered our polymer to have improved sensitivity to weak external force,
+          and also a fast and reversible response.</p>
+          <p>These two components together allow our
+          nanomaterial to have clear, distinct, and repeatable color-change reactions from
+          light human touch.</p>
+          <p>Our indicator also functions effectively as an ink and can be
+          produced in any shape or size, and placed on any forms of packaging as dictated by
+          our clients. The malleable nature of our nanomaterial allows us to work with our
+          clients to design any pattern and color combination that best suits their brand and
+          the nature of their product.</p>
+        </StyledDialog>
+        <button type="button" className="hero-button hero-button-right" onClick={() => setIsRightPopoverOpen(!isRightPopoverOpen)}>
+          How it Works <FontAwesomeIcon icon={faArrowRight} />
+        </button>
+        <StyledDialog open={isRightPopoverOpen} onClose={() => setIsRightPopoverOpen(false)}>
+          <Dialog.Title>The fun behind SafeStamp</Dialog.Title>
+          <p>
+            The indicator, which changes color and reveals hidden patterns when touched,
+            empowers customers to, with ease, verify the authenticity of a product. This
+            elegant and engaging design sets SafeStamp® apart.
+          </p>
+          <blockquote>
+            “It is a staple of behavioral science that conscious engagement with a product serves as the single most effective means to direct the attentional spotlight, an act that is simply not inspired by a passive hologram.”
+            <footer>
+              Dr. Avi Chaudhuri,
+              <br />
+              <cite>The case against holograms: how a once-lofty security technology has fallen</cite>
+            </footer>
+          </blockquote>
+          <p>
+            The act of triggering a color-change on-the-spot and the excitement of revealing secret patterns is <em>fun</em> for a customer, in stark contrast to other passive anti-counterfeit techniques.
+          </p>
+        </StyledDialog>
+      </div>
+    </div>
+    {/*<ContentColumns alignment="center">*/}
+    {/*  <ContentColumn size={1.5}>*/}
+    {/*    <h2>Customers touch our deeptech indicator, triggering a color-change reaction and revealing branded images that verify the product came from an authentic source.</h2>*/}
+    {/*  </ContentColumn>*/}
+    {/*  <ContentColumn size={1}>*/}
+    {/*    <img src={right}></img>*/}
+    {/*  </ContentColumn>*/}
+    {/*</ContentColumns>*/}
   </PageContainer>
 }
