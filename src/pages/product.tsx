@@ -38,6 +38,13 @@ function StyledDialog({
   </Transition>
 }
 
+/* The `Product` function is a React component that renders a page for a product called SafeStamp. It
+includes a header with information about the product's attributes, and a hero image section with two
+buttons that open dialogs when clicked. The dialogs provide more information about the engineering
+and fun aspects of the product. The state variables `isLeftPopoverOpen` and `isRightPopoverOpen` are
+used to control the visibility of the dialogs. The `StyledDialog` component is a custom wrapper
+around the `Dialog` component from the `@headlessui/react` library that provides custom styling and
+animation. */
 export function Product() {
   const [isLeftPopoverOpen, setIsLeftPopoverOpen] = useState(false);
   const [isRightPopoverOpen, setIsRightPopoverOpen] = useState(false);
@@ -104,13 +111,5 @@ export function Product() {
         </StyledDialog>
       </div>
     </div>
-    {/*<ContentColumns alignment="center">*/}
-    {/*  <ContentColumn size={1.5}>*/}
-    {/*    <h2>Customers touch our deeptech indicator, triggering a color-change reaction and revealing branded images that verify the product came from an authentic source.</h2>*/}
-    {/*  </ContentColumn>*/}
-    {/*  <ContentColumn size={1}>*/}
-    {/*    <img src={right}></img>*/}
-    {/*  </ContentColumn>*/}
-    {/*</ContentColumns>*/}
   </PageContainer>
 }
