@@ -1,5 +1,6 @@
 import React from 'react'
 import './Navbar.css'
+import { Link } from 'react-router-dom'
 
 interface NavbarProps {
     logo: string
@@ -19,19 +20,19 @@ const Navbar: React.FC<NavbarProps> = ({ links_left, logo, links_right }) => {
     return (
         <nav className="navbar">
             <div className="navbar-logo">
-              <a href="/"><img src={logo} alt="Logo" /></a>
+              <Link to="/"><img src={logo} alt="Logo" /></Link>
             </div>
             <ul className="navbar-list">
                 {links_left.map((link) => (
                     <li key={link.title}>
-                        <a className="navbar-link" id={link.id} href={link.url}>{link.title}</a>
+                        <Link className="navbar-link" id={link.id} to={link.url}>{link.title}</Link>
                     </li>
                 ))}
             </ul>
             <ul className="navbar-list">
                 {links_right.map((link) => (
                     <li key={link.title}>
-                        <a className="navbar-link" id={link.id} href={link.url}>{link.title}</a>
+                        <Link className="navbar-link" id={link.id} to={link.url}>{link.title}</Link>
                     </li>
                 ))}
             </ul>

@@ -84,7 +84,7 @@ button {
     padding:  0.938em;
     border: none;
     border-radius: 4px;
-    color: #4444c4;
+    color: #18699f;
 }
 
 .form-wrapper button {
@@ -92,7 +92,7 @@ button {
 }
 
 button:hover {
-    color: #4444c4;
+    color: #18699f;
     background-color: #fefefe;
 }
 
