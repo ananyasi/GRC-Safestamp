@@ -27,7 +27,7 @@ export const Application = () => {
     return (
         <div className='wrapper'>
             <div className='form-wrapper'>
-                <h2>Contact Us</h2>
+                <h2 style={{ fontWeight: 'bold'}}>Contact Us</h2>
                 <form onSubmit={onSubmit} noValidate >
                     <div className="blurb" style={{ textAlign: 'center' }}>
                         <p style={{ marginBottom: '1rem' }}> Reach out to us by filling out this form!</p>
