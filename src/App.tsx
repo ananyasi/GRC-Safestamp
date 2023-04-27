@@ -22,6 +22,11 @@ const links2 = [
   { title: 'Reach Out', url: '/reachout'},
 ];
 
+/* This code is creating a router using the `createBrowserRouter` function from the `react-router-dom`
+library. The router is defined using JSX syntax and includes several nested `Route` components that
+define the different pages of the application. The `Navbar` component is also included in the router
+and is rendered on every page using the `Outlet` component. The `router` variable is then passed to
+the `RouterProvider` component to make it available to the rest of the application. */
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<>
     <Navbar logo={logo} links_left={links} links_right={links2}/>
@@ -35,6 +40,13 @@ const router = createBrowserRouter(createRoutesFromElements(
   </Route>
 ));
 
+/**
+ * This is a functional component that returns a div containing a RouterProvider component with a
+ * router prop.
+ * @returns A React component called `App` is being returned. It contains a `div` element with a class
+ * name of "App" and a child component called `RouterProvider` with a prop of `router` that is being
+ * passed in. The value of `router` is not shown in the code snippet provided.
+ */
 function App() {
   return (
       <div className="App">

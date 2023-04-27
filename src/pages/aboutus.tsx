@@ -2,6 +2,13 @@ import { ContentSection, PageContainer } from "../components/ContentBlocks";
 import awards from "../assets/awards.png";
 import './aboutus.css'
 
+/**
+ * The AboutUs function returns a JSX component that displays information about SafeStamp Inc., a
+ * veteran-owned company with an award-winning product on a mission to end counterfeiting.
+ * @returns A React functional component called AboutUs, which returns a PageContainer containing a
+ * ContentSection with information about SafeStamp Inc. and their mission to end counterfeiting. The
+ * ContentSection includes a heading, paragraphs of text, and an image of awards.
+ */
 const AboutUs = () => {
     return <PageContainer>
         <ContentSection centered textSize="medium">

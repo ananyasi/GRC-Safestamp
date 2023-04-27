@@ -15,6 +15,13 @@ function Client({ children, backgroundImage }: PropsWithChildren<{
   </ImageBackground>
 }
 
+/**
+ * The Clients function returns a page container with sections showcasing the various industries and
+ * products that can be protected from counterfeiting.
+ * @returns A React component called Clients is being returned. It renders a PageContainer component
+ * that contains three Client components, each with a different background image and text describing
+ * the industries and products that can be protected from counterfeiting.
+ */
 const Clients = () => {
   return <PageContainer>
     <ContentSection centered textSize="large">

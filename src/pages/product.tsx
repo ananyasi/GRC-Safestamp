@@ -10,6 +10,14 @@ import center from '../assets/Product.png'
 function Checkmark() {
   return <FontAwesomeIcon icon={faCheckCircle} />
 }
+
+/* The `Product` function is returning a JSX element that contains a `PageContainer` component with
+two `ContentColumns` components. The first `ContentColumn` contains a `h1` element and two `p`
+elements with text describing the features of the SafeStamp® product. The second `ContentColumn`
+contains an `img` element with a `src` attribute pointing to an image file. The `ContentColumns`
+components are aligned to the center using the `alignment` prop and the second `ContentColumn` is
+given an `order` prop of 1 to change its position in the layout. */
+
 export function Product() {
   return <PageContainer>
     <ContentColumns alignment="center">
@@ -27,17 +35,5 @@ export function Product() {
         <img className="center" src={center}></img>
       </ContentColumn>
     </ContentColumns>
-    {/*<ContentColumn size={1.5} order={2}>*/}
-    {/*  <h2>Businesses put our deeptech indicator on their product's packaging.</h2>*/}
-    {/*</ContentColumn>*/}
-
-    {/*<ContentColumns alignment="center">*/}
-    {/*  <ContentColumn size={1.5}>*/}
-    {/*    <h2>Customers touch our deeptech indicator, triggering a color-change reaction and revealing branded images that verify the product came from an authentic source.</h2>*/}
-    {/*  </ContentColumn>*/}
-    {/*  <ContentColumn size={1}>*/}
-    {/*    <img src={right}></img>*/}
-    {/*  </ContentColumn>*/}
-    {/*</ContentColumns>*/}
   </PageContainer>
 }

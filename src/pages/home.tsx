@@ -29,6 +29,13 @@ function Client({ children, backgroundImage }: PropsWithChildren<{
   </ImageBackground>
 }
 
+/**
+ * This is a functional component that renders a webpage with information about the economic and social
+ * impact of counterfeiting, and promotes the use of SafeStamp® to combat it.
+ * @returns A React component called Home is being returned. It contains JSX code that renders a
+ * webpage with various sections and content, including headings, images, and links. Some sections are
+ * commented out, indicating that they may be optional or unfinished.
+ */
 const Home = () => {
   return <PageContainer>
     <ContentSection textSize="small" centered>

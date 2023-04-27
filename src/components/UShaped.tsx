@@ -1,6 +1,19 @@
 import React, { PropsWithChildren, useEffect, useRef } from 'react';
 import styles from './UShaped.module.css';
 
+/**
+ * This is a React component that arranges its child elements in a U-shaped layout using CSS
+ * transforms.
+ * @param  - This is a React functional component called "UShaped" that takes in children as props. It
+ * uses the useRef and useEffect hooks to position the child elements in a U-shaped layout. The
+ * component returns a div with a ref to the uarcRef variable and maps over the children to render each
+ * child
+ * @returns This code exports a React functional component named `UShaped`. It takes in children as
+ * props and returns a div container with a ref to a `uarcRef` element. The `setUShapePosition`
+ * function is called on mount and on window resize, which calculates the position of each child
+ * element within the container using trigonometry and sets the transform style property accordingly.
+ * The children are mapped
+ */
 export function UShaped({ children }: PropsWithChildren<{}>) {
   const uarcRef = useRef<HTMLDivElement | null>(null);
 

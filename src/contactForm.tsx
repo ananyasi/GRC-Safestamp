@@ -6,6 +6,12 @@ import { useFormspark } from "@formspark/use-formspark";
 
 const FORMSPARK_FORM_ID = "GyJhhzXJ";
 
+/* This code exports a React component called `Application` that renders a contact form. The form uses
+the `useFormspark` hook from the `@formspark/use-formspark` library to submit form data to a
+Formspark form with the ID `GyJhhzXJ`. The component also uses the `useState` hook to manage the
+state of the form inputs and checkboxes. When the form is submitted, the `onSubmit` function is
+called, which prevents the default form submission behavior, calls the `submit` function from
+`useFormspark` with the form data, and displays an alert message. */
 export const Application = () => {
     const [submit, submitting] = useFormspark({
         formId: FORMSPARK_FORM_ID,

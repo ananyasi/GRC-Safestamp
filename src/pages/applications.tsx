@@ -14,6 +14,7 @@ import babyProducts from "../assets/baby-products.jpg"
 import cosmetics from "../assets/cosmetics.jpg"
 import luxuryGoods from "../assets/luxury-goods.jpg"
 
+/* The code defines two React functional components: `Application` and `Client`. */
 function Application({ icon, title, alignment }: {
   icon: IconDefinition,
   title: string,
@@ -33,6 +34,14 @@ function Client({ image, name }: { image?: string, name: string }) {
   </div>
 }
 
+/**
+ * This is a React component that renders a page with a hero image and sections for showcasing
+ * different applications and industries.
+ * @returns A React component that renders a page with a hero image and two content sections. The first
+ * content section contains a heading, the hero image, and four Application components arranged in a
+ * U-shape. The second content section contains a heading and a grid of Client components representing
+ * different industries.
+ */
 export function Applications() {
   return <PageContainer>
     <ContentSection centered>

@@ -1,6 +1,11 @@
 import React from 'react'
 import './Navbar.css'
 
+/* `interface NavbarProps` is defining the type of props that the `Navbar` component expects to
+receive. It specifies that the component should receive a `logo` prop of type `string`, and two
+arrays of objects `links_left` and `links_right`. Each object in these arrays should have a `title`
+property of type `string`, a `url` property of type `string`, and an optional `id` property of type
+`string`. */
 interface NavbarProps {
     logo: string
     links_left: {
@@ -15,6 +20,15 @@ interface NavbarProps {
       }[]
 }
 
+/**
+ * This is a TypeScript React component for a navbar that takes in props for left and right links and a
+ * logo.
+ * @param  - The `Navbar` component is a functional component that takes in three props:
+ * @returns The `Navbar` component is being returned, which is a functional component that renders a
+ * navigation bar with a logo and links on the left and right sides. The component takes in
+ * `links_left`, `logo`, and `links_right` as props and maps over them to render the corresponding
+ * links.
+ */
 const Navbar: React.FC<NavbarProps> = ({ links_left, logo, links_right }) => {
     return (
         <nav className="navbar">
