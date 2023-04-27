@@ -78,7 +78,6 @@ input::placeholder {
 }
 
 button {
-    min-width: 100%;
     cursor: pointer;
     margin-right: 0.25em;
     margin-top: 0.5em;
@@ -87,6 +86,11 @@ button {
     border-radius: 4px;
     color: #4444c4;
 }
+
+.form-wrapper button {
+  min-width: 100%;
+}
+
 button:hover {
     color: #4444c4;
     background-color: #fefefe;
